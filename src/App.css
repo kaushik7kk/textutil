@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.darkMode, textarea.darkMode:focus, textarea.darkMode::placeholder {
+  background-color: #04143d;
+  color: white;
+}
+
+.lightMode, textarea.lightMode:focus, textarea.lightMode::placeholder {
+  background-color: white;
+  color: black;
+}

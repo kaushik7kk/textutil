@@ -5,12 +5,14 @@ export default function TextForm(props) {
 
   const clickUpHandler = () => {
     setText(text.toUpperCase());
+    props.showAlert('Converted to Uppercase!!!', 'success')
   };
-
+  
   const clickLowHandler = () => {
     setText(text.toLowerCase());
+    props.showAlert('Converted to Lowercase!!!', 'success')
   };
-
+  
   const onChangeHandler = (e) => {
     setText(e.target.value);
   };
@@ -18,9 +20,9 @@ export default function TextForm(props) {
     <>
       <div className="container">
         <h1>{props.heading}</h1>
-        <div class="mb-3">
+        <div className="mb-3">
           <textarea
-            className="form-control"
+            className={`form-control ${props.mode}Mode`}
             id="textBox"
             rows="8"
             value={text}
